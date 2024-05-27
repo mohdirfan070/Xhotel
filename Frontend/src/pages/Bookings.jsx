@@ -1,10 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import AddBookings from '../components/AddBookings'
 function Bookings() {
   return (
     <>
      <Navbar/>
-    <div>This is Bookings</div>
+   
+    <AddBookings/>
     </>
   )
 }

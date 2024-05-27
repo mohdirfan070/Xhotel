@@ -31,6 +31,20 @@ app.get("/api/rooms",async(req,res)=>{
     res.json({msg:"Hello from Backend,These are Empty Rooms",result});
 });
 
+app.get("/api/getbookings",async(req,res)=>{
+    let result = await User.find({hotel:true});
+    res.json({msg:"Hello from Backend",result});
+});
+
+app.patch("/api/deletebookings",async(req,res)=>{
+    let {x} = req.body;
+    // console.log(x);
+    await User.findOneAndDelete({mobileNumber:x}).then(async()=>{
+        let result = await User.find({hotel:true});
+        res.json({msg:"Hello from Backend",result});
+    })
+});
+
 // Load Taken Rooms
 app.get("/api/takenrooms",async(req,res)=>{
     // let roomData = await Room.find({occupied:true});
@@ -52,6 +66,13 @@ app.post('/api/adduser',(req,res)=>{
     let {inpData} = req.body;
     // console.log(inpData.name);
     res.json({status:true , inpData } );
+});
+
+//add Booking
+app.post('/api/addbooking',async(req,res)=>{
+    let {inpData} = req.body;
+    await User.insertMany({name:inpData.name,mobileNumber:inpData.mobileNumber,idNumber:inpData.idNumber,roomNo:inpData.roomNo,date:inpData.date,checkInTime:inpData.checkInTime,}),
+    res.json({status:true} );
 });
 
 app.post('/api/getuser',async(req,res)=>{

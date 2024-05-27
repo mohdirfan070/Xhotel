@@ -18,13 +18,22 @@ const userSchema = new mongoose.Schema({
           },
           username:{
             type:String,
-            required:true,
+            // required:true,
+          },  date:{
+            type:String,
+          },
+          date:{
+            type:String,
+            default:`${Date().split(" ").slice(1,4).toString()}`
           },
           checkInTime:{
             type:String,
             default:`${currentDate.toLocaleTimeString()+(Date().split(" ").slice(1,4).toString())}`
           },roomNo:{
             type:Number,
+          },hotel:{
+              type:Boolean,
+              default:true
           }
 })
 
