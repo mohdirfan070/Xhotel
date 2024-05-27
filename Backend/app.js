@@ -49,7 +49,7 @@ app.get("/api/takenrooms",async(req,res)=>{
 })
 
 //Add USer
-app.post('https://xhotel-osu7.onrender.com/api/adduser',(req,res)=>{
+app.post('/api/adduser',(req,res)=>{
     let {inpData} = req.body;
     // console.log(inpData.name);
     res.json({status:true , inpData } );
