@@ -28,7 +28,7 @@ function AddUser() {
           }else{
             setResponse2(true);
             try{
-            await axios.post('https://xhotel-osu7.onrender.com/api/adduser', { inpData}).then((response)=>{
+            await axios.post('/api/adduser', { inpData}).then((response)=>{
               setInpData({
                 name:"",
                 mobileNumber:91,

@@ -51,7 +51,7 @@ const currentDate = new Date();
           }else{
             setResponse2(true);
             try{
-            await axios.post('https://xhotel-osu7.onrender.com/api/addcustomer', { inpData}).then((response)=>{
+            await axios.post('/api/addcustomer', { inpData}).then((response)=>{
               // reset();
               setInpData({
                 name:"",
