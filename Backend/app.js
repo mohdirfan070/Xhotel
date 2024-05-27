@@ -27,7 +27,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json()); 
 
 //Load Empty Rooms
-app.get("https://xhotel-osu7.onrender.com/api/rooms",async(req,res)=>{
+app.get("/api/rooms",async(req,res)=>{
     let result = await Room.find({occupied:false});
     res.json({msg:"Hello from Backend,These are Empty Rooms",result});
 });
