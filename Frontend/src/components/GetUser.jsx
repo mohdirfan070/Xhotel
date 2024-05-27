@@ -32,7 +32,7 @@ function GetUser() {
           }else{
             setResponse2(true);
             try{
-            await axios.post('https://xhotel-osu7.onrender.com/api/getuser', { inpData}).then((response)=>{
+            await axios.post('http://localhost:8000/api/getuser', { inpData}).then((response)=>{
               console.log(response);
                 setUserInfo({
                     name:response.data.result[0].name,

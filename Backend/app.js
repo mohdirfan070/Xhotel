@@ -3,16 +3,16 @@ const express  = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
-// 'mongodb://localhost:27017/hotel'
-// mongoose.connect().then(()=>{console.log("Successfully Connected To Database");});
+// 
+ mongoose.connect('mongodb://localhost:27017/hotel').then(()=>{console.log("Successfully Connected To Database");});
 
-main().then(()=>{
-    console.log("Connected to database Succesfully!");
-}).catch(err => console.log(err));
+// main().then(()=>{
+//     console.log("Connected to database Succesfully!");
+// }).catch(err => console.log(err));
 
-async function main() {
-  await mongoose.connect(process.env.MONGODB_CONNECT_URI);
-}
+// async function main() {
+//   await mongoose.connect(process.env.MONGODB_CONNECT_URI);
+// }
 
 const User = require('./models/userSchema');
 const Room = require('./models/RoomSchema');
