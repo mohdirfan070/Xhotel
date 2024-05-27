@@ -44,7 +44,7 @@ function AddRoom() {
       setResponse2(true);
       try {
         await axios
-          .post("http://localhost:8000/api/addroom", { inpData })
+          .post("https://xhotel-lo9z.onrender.com/api/addroom", { inpData })
           .then((response) => {
             setInpData({
               roomNo: "",

@@ -11,7 +11,7 @@ function TakenRooms() {
   let [gotData, setGotData] = useState([]);
 
     let getData = async () => {
-        await axios.get("http://localhost:8000/api/takenrooms").then((response) => {
+        await axios.get("https://xhotel-lo9z.onrender.com/api/takenrooms").then((response) => {
           console.log(response);
           setmssg(response.data.msg);
           setGotData(response.data.result);
@@ -23,7 +23,7 @@ function TakenRooms() {
     }, []);
 
     let leaveRoom = async(roomNo)=>{
-        axios.patch('http://localhost:8000/api/removecustomer',{roomNo}).then((response) => {
+        axios.patch('https://xhotel-lo9z.onrender.com/api/removecustomer',{roomNo}).then((response) => {
           setmssg(response.data.msg);
           getData();
           });

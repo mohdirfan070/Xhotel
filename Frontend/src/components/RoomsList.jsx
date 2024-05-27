@@ -18,7 +18,7 @@ function RoomsList() {
     roomNo:0
   });
   let getData = async () => {
-    await axios.get("http://localhost:8000/api/rooms").then((response) => {
+    await axios.get("https://xhotel-lo9z.onrender.com/api/rooms").then((response) => {
       // console.log(response.data.msg);
       setmssg(response.data.msg);
       // console.log("Got data");
@@ -53,7 +53,7 @@ function RoomsList() {
         }else{
           setResponse2(true);
           try{
-          await axios.post('http://localhost:8000/api/addcustomer', { inpData}).then((response)=>{
+          await axios.post('https://xhotel-lo9z.onrender.com/api/addcustomer', { inpData}).then((response)=>{
             reset();
             getData();
             // setInpData({

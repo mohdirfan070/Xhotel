@@ -28,7 +28,7 @@ function AddUser() {
           }else{
             setResponse2(true);
             try{
-            await axios.post('http://localhost:8000/api/adduser', { inpData}).then((response)=>{
+            await axios.post('https://xhotel-lo9z.onrender.com/api/adduser', { inpData}).then((response)=>{
               setInpData({
                 name:"",
                 mobileNumber:91,
