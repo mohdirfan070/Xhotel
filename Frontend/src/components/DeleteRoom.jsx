@@ -24,7 +24,7 @@ function DeleteRoom() {
           setResponse2(true);
           try {
             await axios
-              .delete("/api/deleteroom", {data:{inpData} })
+              .delete("https://xhotel-osu7.onrender.com/api/deleteroom", {data:{inpData} })
               .then((response) => {
                 setInpData({
                   roomNo: "",
