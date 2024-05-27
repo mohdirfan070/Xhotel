@@ -1,0 +1,15 @@
+.hero{
+    margin: auto;
+}
+.btn-success{
+    &:hover{
+        color: white;
+    }
+}
+
+@media (max-width:490px) {
+    .hero{
+        width: 90%;
+        margin:0 0.3rem
+         }
+}
