@@ -116,7 +116,9 @@ function RoomsList() {
   return (
     <>
 
-      <p>This is messege from backend : "{mssg}"</p>
+
+
+      <p>This is messege from backend : "{(mssg)?(mssg):<><span className="loading loading-spinner text-primary"></span><span>Please! wait...</span></>}"</p>
 
       <div className="card-container   my-3  flex justify-center align-top gap-2 flex-wrap h-max">
         {gotData.map((card, i) => (
