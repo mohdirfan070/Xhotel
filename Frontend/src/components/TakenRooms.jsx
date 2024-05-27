@@ -12,6 +12,7 @@ function TakenRooms() {
 
     let getData = async () => {
         await axios.get("/api/takenrooms").then((response) => {
+          console.log(response);
           setmssg(response.data.msg);
           setGotData(response.data.result);
         console.log(response.data.result);
