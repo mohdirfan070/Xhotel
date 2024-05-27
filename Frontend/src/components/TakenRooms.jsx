@@ -11,7 +11,7 @@ function TakenRooms() {
   let [gotData, setGotData] = useState([]);
 
     let getData = async () => {
-        await axios.get("https://xhotel-osu7.onrender.com/api/takenrooms").then((response) => {
+        await axios.get("/api/takenrooms").then((response) => {
           console.log(response);
           setmssg(response.data.msg);
           setGotData(response.data.result);

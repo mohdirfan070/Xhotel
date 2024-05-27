@@ -2,6 +2,7 @@ require('dotenv').config();
 const express  = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const cors = require('cors');
 // 'mongodb://localhost:27017/hotel'
 // mongoose.connect().then(()=>{console.log("Successfully Connected To Database");});
 
@@ -15,6 +16,9 @@ async function main() {
 
 const User = require('./models/userSchema');
 const Room = require('./models/RoomSchema');
+
+app.use(cors());
+
 const PORT = process.env.PORT;
 app.listen(PORT,()=>{
     console.log(`Listenning on Port: ${PORT}`);
@@ -23,7 +27,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json()); 
 
 //Load Empty Rooms
-app.get("/api/rooms",async(req,res)=>{
+app.get("https://xhotel-osu7.onrender.com/api/rooms",async(req,res)=>{
     let result = await Room.find({occupied:false});
     res.json({msg:"Hello from Backend,These are Empty Rooms",result});
 });
@@ -45,7 +49,7 @@ app.get("/api/takenrooms",async(req,res)=>{
 })
 
 //Add USer
-app.post('/api/adduser',(req,res)=>{
+app.post('https://xhotel-osu7.onrender.com/api/adduser',(req,res)=>{
     let {inpData} = req.body;
     // console.log(inpData.name);
     res.json({status:true , inpData } );
