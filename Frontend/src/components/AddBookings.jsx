@@ -48,7 +48,7 @@ function AddUser() {
           }else{
             setResponse2(true);
             try{
-            await axios.post('http://localhost:8000/api/addbooking', { inpData}).then((response)=>{
+            await axios.post('https://xhotel-lo9z.onrender.com/api/addbooking', { inpData}).then((response)=>{
               setInpData({
                 name:"",
                 mobileNumber:"",
@@ -92,7 +92,7 @@ function AddUser() {
       let deleteBooking = async(x)=>{
         // console.log("working");
         // console.log(x);
-        await axios.patch('http://localhost:8000/api/deletebookings',{x}).then((response)=>{
+        await axios.patch('https://xhotel-lo9z.onrender.com/api/deletebookings',{x}).then((response)=>{
             // console.log(response);
             setGotUsers([...response.data.result]);
     });
