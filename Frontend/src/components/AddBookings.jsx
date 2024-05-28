@@ -132,7 +132,7 @@ function AddUser() {
       </div>
       </div>
 
-      <div className="overflow-x-auto mb-20 m-auto max-w-[80%]">
+      <div className="overflow-x-auto mb-20 m-auto max-w-[96%]">
   <table className="table">
     {/* head */}
     <thead>
@@ -148,7 +148,7 @@ function AddUser() {
 
        
 
-    <tbody>
+    <tbody className="w-full">
     {/* {(gotUsers)?(gotUsers.map((user,i)=>{<tr className="hover">
         <th>{i+1}</th>
         <td>Hart Hagerty</td>
