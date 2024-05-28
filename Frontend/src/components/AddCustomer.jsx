@@ -55,7 +55,7 @@ const currentDate = new Date();
               // reset();
               setInpData({
                 name:"",
-                mobileNumber:91,
+                mobileNumber:"",
                 idNumber:"",
                 checkInTime:`${currentDate.toLocaleTimeString()+(Date().split(" ").slice(1,4).toString())}`,
                 username:'',

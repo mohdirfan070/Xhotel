@@ -28,7 +28,7 @@ function AddUser() {
 
     let getUsers = async()=>{
       
-                    await axios.get('http://localhost:8000/api/getbookings').then((response)=>{
+                    await axios.get('https://xhotel-lo9z.onrender.com/api/getbookings').then((response)=>{
                             console.log(response);
                             setGotUsers([...response.data.result]);
                     });
