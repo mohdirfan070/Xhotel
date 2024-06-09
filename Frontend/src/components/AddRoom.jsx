@@ -7,7 +7,7 @@ function AddRoom() {
     roomNo: "",
     category: "",
     features: "",
-    fare: 0,
+    fare: "",
     img1: "",
     img2: "",
     img3: "",
@@ -19,7 +19,7 @@ function AddRoom() {
       roomNo: "",
       category: "",
       features: "",
-      fare: 0,
+      fare: "",
       img1: "",
       img2: "",
       img3: "",
@@ -35,7 +35,7 @@ function AddRoom() {
       inpData.roomNo == "" ||
       inpData.category == "" ||
       inpData.features == [] ||
-      inpData.fare == 0,
+      inpData.fare == "",
       inpData.img1==""
     ) {
       // alert("Empty Data Fields!");
@@ -50,7 +50,7 @@ function AddRoom() {
               roomNo: "",
               category: "",
               features: "",
-              fare: 0,
+              fare: "",
               img1: "",
               img2: "",
               img3: "",
